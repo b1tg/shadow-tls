@@ -2,7 +2,7 @@ name: Build Docker Images
 on:
   push:
     tags:
-      - v*
+      - no*
 
 env:
   IMAGE_NAME: shadow-tls
