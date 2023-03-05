@@ -218,6 +218,11 @@ pub(crate) fn get_sip003_arg() -> Option<Args> {
 }
 
 fn main() {
+    std::env::set_var("MONOIO_FORCE_LEGACY_DRIVER", "1");
+    println!(
+        "test env: {:?}",
+        std::env::var("MONOIO_FORCE_LEGACY_DRIVER")
+    );
     tracing_subscriber::registry()
         .with(fmt::layer())
         .with(
